@@ -1,0 +1,67 @@
+cette presontation crees par ismailsamil
+
+Assurez-vous d'avoir Node.js installé sur votre machine, car Create React App dépend de Node.js pour fonctionner. Vous pouvez télécharger la dernière version de Node.js sur le site officiel : Node.js
+
+Ouvrez votre terminal ou votre invite de commande. La manière de le faire dépend du système d'exploitation que vous utilisez.
+
+ Installez Create React App
+
+Utilisez la commande suivante pour installer Create React App globalement sur votre machine :
+
+
+" npm install -g create-react-app "
+Créez une nouvelle application React
+
+Une fois l'installation terminée, vous pouvez créer une nouvelle application React en utilisant la commande suivante :
+
+" npx create-react-app nom-de-votre-application "
+
+Accédez au dossier de votre application:
+"cd nom-de-votre-application"
+
+Organisation des Dossiers :
+    -Créez des dossiers tels que components, actions, reducers, et store.
+    -Placez les composants React dans le dossier components.
+    -Les actions et les reducers seront respectivement dans les dossiers actions et reducers.
+
+Création des Actions :
+   - Dans le dossier actions, créez un fichier (par exemple, bookActions.js).
+   - Définissez les actions que vous souhaitez effectuer, par exemple, fetchBooks, addBook, borrowBook, etc.
+    - Chaque action est une fonction qui renvoie un objet avec un type et éventuellement une charge utile (payload).
+
+    + Création des Reducers :
+        - Dans le dossier reducers, créez un fichier (par exemple, bookReducer.js).
+        - Écrivez des fonctions reducers pour gérer les changements d'état associés à chaque action.
+        - Chaque reducer prend l'état actuel et une action en paramètres, puis retourne le nouvel état.
+
+    Création du rootReducer :
+        - Dans le dossier reducers, créez un fichier (par exemple, index.js).
+        - Utilisez combineReducers de la bibliothèque Redux pour combiner tous les reducers en un seul rootReducer.
+        - Exportez le rootReducer.
+
+Configuration du Store Redux
+
+    + Création du Store :
+       - Dans le dossier racine, créez un fichier store.js.
+       - Importez createStore de Redux.
+       - Utilisez createStore en passant le rootReducer en tant qu'argument.
+
++ Connexion de Redux à React
+Installation de Redux dans l'Application React :
+
+    - Utilisez npm install redux react-redux pour installer les dépendances nécessaires.
+
++ Provider dans index.js :
+
+    Dans le fichier src/index.js, importez Provider de react-redux.
+    Entourez l'ensemble de l'application avec Provider et fournissez le Redux Store comme propriété.
+
+Développement des Composants
+
+    + Création des Composants :
+      -  Dans le dossier components, créez des fichiers pour chaque composant (par exemple, BookList.js, Search.js, etc.).
+       - Importez connect de react-redux dans chaque composant pour les connecter à Redux.
+
+    + Utilisation des Actions et de l'État Redux :
+      -  Utilisez connect pour connecter les composants à Redux et accéder à l'état global et aux actions.
+       - Utilisez les actions dans les composants pour effectuer des opérations sur les livres.
